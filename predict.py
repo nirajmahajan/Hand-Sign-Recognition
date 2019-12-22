@@ -60,14 +60,15 @@ with tf.Session() as sess:
 	saver.restore(sess, 'model/trained_model')		
 
 	# Forward propagation
-	yhat = tf.nn.softmax(forward(X, parameters))
+	yhat = tf.nn.softmax(tf.reshape(forward(X, parameters), [-1]))
 	p = tf.argmax(yhat)
 	prob = tf.reduce_max(yhat)
 
 	[pred, prob] = sess.run([p, prob], feed_dict = {X: my_image})
+	yhat = sess.run(yhat, feed_dict = {X: my_image})
 
 	print('\n\n\n')
 	print("Prediction: {}".format(pred))
-	print("Probability: {}".format(prob))
+	# print("Probability: {}".format(prob))
 
 plt.show()
