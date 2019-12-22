@@ -20,7 +20,7 @@ tf.set_random_seed(1)
 def loadDataset():
 	np.random.seed(1)
 	tf.set_random_seed(1)
-	filename = 'data/train_signs.h5'
+	filename = '../../utils/data/train_signs.h5'
 	if(not os.path.isfile(filename)):
 		print('{} not found'.format(filename))
 		os._exit(1)
@@ -33,7 +33,7 @@ def loadDataset():
 		data_train_y = np.array(f['train_set_y'])
 		data_train_y = to_one_hot(data_train_y, 6).T
 
-	filename = 'data/test_signs.h5'
+	filename = '../../utils/data/test_signs.h5'
 	if(not os.path.isfile(filename)):
 		print('{} not found'.format(filename))
 		os._exit(1)
