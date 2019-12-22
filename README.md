@@ -2,19 +2,8 @@
 
 A hand sign classifier in Tensorflow (v1.15) using several models.
 
-1. Neural Network : Accuracy of 77.50%
-2. Convolutional Neural Network : Accuracy of 88.33 %
-
-## Code Structure:
-
-The repository has the following files:
-
-- [helpers.py](https://github.com/nirajmahajan/Hand-Sign-Recognition/blob/master/helpers.py) : Contains all essential imports and functions
-- [train.py](https://github.com/nirajmahajan/Hand-Sign-Recognition/blob/master/train.py) : Used for training and testing the accuracy of a model
-- [predict.py](https://github.com/nirajmahajan/Hand-Sign-Recognition/blob/master/predict.py) : Used for predicting the digit in a given image
-- [model/](https://github.com/nirajmahajan/Hand-Sign-Recognition/tree/master/model) : Has a pre-trained model
-- [sample/](https://github.com/nirajmahajan/Hand-Sign-Recognition/tree/master/sample) : Has a few sample images
-- [data/](https://github.com/nirajmahajan/Hand-Sign-Recognition/tree/master/data) : Contains the datasets in .h5 format
+1. [Neural Network](https://github.com/nirajmahajan/Hand-Sign-Recognition/tree/master/models/NN) : Accuracy of 77.50%
+2. [Convolutional Neural Network](https://github.com/nirajmahajan/Hand-Sign-Recognition/tree/master/models/CNN) : Accuracy of 88.33 %
 
 ## Code Structure:
 
@@ -25,7 +14,7 @@ The code structure for all the models is quite similar. Each model has the follo
 - **predict.py** : Used for predicting the digit in a given image
 - **model/** : Has a pre-trained model
 
-Apart from this, the MNIST data and a few sample images are located in the [Utils](https://github.com/nirajmahajan/Digit-Recognition/tree/master/utils) folder.
+Apart from this, the SIGNS data and a few sample images are located in the [Utils](https://github.com/nirajmahajan/Hand-Sign-Recognition/tree/master/utils) folder.
 
 ## Usage of Code:
 
