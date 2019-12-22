@@ -117,13 +117,13 @@ def costFunction(yhat, y):
 	cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits = logits, labels = labels))
 	return cost
 
-def predict(X, parameters):
-	W1 = tf.convert_to_tensor(parameters["W1"])
-	b1 = tf.convert_to_tensor(parameters["b1"])
-	W2 = tf.convert_to_tensor(parameters["W2"])
-	b2 = tf.convert_to_tensor(parameters["b2"])
-	W3 = tf.convert_to_tensor(parameters["W3"])
-	b3 = tf.convert_to_tensor(parameters["b3"])
+def predictor(X, parameters):
+	W1 = parameters["W1"]
+	b1 = parameters["b1"]
+	W2 = parameters["W2"]
+	b2 = parameters["b2"]
+	W3 = parameters["W3"]
+	b3 = parameters["b3"]
 	
 	params = {  "W1": W1,
 				"b1": b1,
