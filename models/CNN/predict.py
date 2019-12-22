@@ -24,7 +24,7 @@ image = np.array(ndimage.imread(fname, flatten=False))
 image = image/255.
 image = scipy.misc.imresize(image, size=(64,64))
 image = image[:, :, 0:3]
-my_image = image.reshape((1, 64*64*3)).T
+my_image = image.reshape((1, 64, 64, 3))
 
 n_x = 12288
 n_y = 6
@@ -53,7 +53,7 @@ with tf.Session() as sess:
 
 	# Load data
 
-	p = tf.argmax(yhat, feed_dict = {X: my_image})
+	p = tf.argmax(yhat)
 	prob = tf.reduce_max(yhat)
 
 	[pred, prob] = sess.run([p, prob], feed_dict = {X: my_image})
